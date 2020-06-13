@@ -1,0 +1,28 @@
+// @file
+// Typography
+
+$base-font-size: 16px;
+$base-line-height: 1.5;
+$vertical-spacing: $base-font-size; // Used as the default spacing below most items such as paragraphs, lists, etc.
+
+// Fonts
+$system-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Open Sans', 'Helvetica Neue', sans-serif;
+$base-font-family: 'Avenir', sans-serif;
+
+// Typographic Scale
+$font-size-xxxl: rem(72px);
+$font-size-xxl: rem(60px);
+$font-size-xl: rem(48px);
+$font-size-lg: rem(36px);
+$font-size-md: rem(24px);
+$font-size-sm: rem($base-font-size);
+$font-size-xs: rem(14px);
+$font-size-xxs: rem(12px);
+
+// Heading Sizes
+$font-size-h1: $font-size-xxxl;
+$font-size-h2: $font-size-xxl;
+$font-size-h3: $font-size-xl;
+$font-size-h4: $font-size-lg;
+$font-size-h5: $font-size-md;
+$font-size-h6: $font-size-md;

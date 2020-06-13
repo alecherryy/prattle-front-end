@@ -1,0 +1,22 @@
+// @file
+// Fonts
+@font-face {
+  font-family: 'Avenir';
+  src: url('/src/css/fonts/AvenirNextLTPro-Light.woff') format('woff'),
+    url('/src/css/fonts/AvenirNextLTPro-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/src/css/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+      url('/src/css/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/src/css/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+    url('/src/css/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+}

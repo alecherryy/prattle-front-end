@@ -1,41 +1,135 @@
-// this is where you set your base font size
-$modularscale: (
-  base: 16px,
-  ratio: 1.33
-);
+// @file
+// Base styles
 
-.App {
-  font-family: "Verdana", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-  text-align: center;
+html {
+  box-sizing: border-box;
+  font-size: 100% * ($base-font-size / 20px);
+  line-height: $base-line-height;
+  min-height: 100%;
+  text-size-adjust: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  background-color: $blue;
+  color: $blue-dark;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  transition: background-color 1s ease-in-out;
+  word-wrap: break-word;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: ms(0);
-  color: white;
-}
+%hN {
+  @extend %base-font-family !optional;
+  color: $black;
+  font-weight: 700;
+  hyphens: none;
+  line-height: 1.1;
+  margin: 0 0 rem($vertical-spacing);
+  text-rendering: optimizeLegibility;
 
-.App-link {
-  color: #61dafb;
-}
+  @media print {
+    & {
+      orphans: 3;
+      page-break-after: avoid;
+      widows: 3;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+      &::after {
+        display: inline-block;
+      }
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+
+h1,
+%h1 {
+  @extend %hN;
+  font-size: $font-size-h2;
+  margin-bottom: 0.5em;
+
+  @include bp-medium {
+    font-size: $font-size-h1;
   }
+}
+
+h2,
+%h2 {
+  @extend %hN;
+  font-size: $font-size-h3;
+
+  @include bp-medium {
+    font-size: $font-size-h2;
+  }
+}
+
+h3,
+%h3 {
+  @extend %hN;
+  font-size: $font-size-lg;
+
+  @include bp-medium {
+    font-size: $font-size-h3;
+  }
+}
+
+h4,
+%h4 {
+  @extend %hN;
+  font-size: $font-size-h5;
+
+  @include bp-medium {
+    font-size: $font-size-h4;
+  }
+}
+
+h5,
+%h5 {
+  @extend %hN;
+  font-size: $font-size-h6;
+
+  @include bp-medium {
+    font-size: $font-size-h5;
+  }
+}
+
+h6,
+%h6 {
+  @extend %hN;
+  font-size: $font-size-h6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // Remove top margin for adjacent subheadings.
+  font-family: $base-font-family;
+}
+
+p {
+  font: {
+    family: $base-font-family;
+    size: $base-font-size;
+  }
+  margin: 0 0 1rem;
+
+  @media print {
+    & {
+      orphans: 3;
+      widows: 3;
+    }
+  }
+}
+
+hr {
+  border: solid 1px $white;
+}
+
+// section {}
+
+a {
+  color: $purple-dark;
+  font-family: $base-font-family;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
