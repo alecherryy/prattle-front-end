@@ -3,7 +3,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 100% * ($base-font-size / 20px);
+  font-size: 100% * ($base-font-size / 16px);
   line-height: $base-line-height;
   min-height: 100%;
   text-size-adjust: 100%;
@@ -21,7 +21,7 @@ body {
 
 %hN {
   @extend %base-font-family !optional;
-  color: $black;
+  color: $blue-dark;
   font-weight: 700;
   hyphens: none;
   line-height: 1.1;
@@ -125,7 +125,7 @@ hr {
 // section {}
 
 a {
-  color: $purple-dark;
+  color: $blue-dark;
   font-family: $base-font-family;
   text-decoration: none;
 }

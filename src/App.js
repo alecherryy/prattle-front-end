@@ -1,7 +1,6 @@
+import './App.scss';
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './index.css'; // remove this when creating a new project
-import './App.scss';
 
 class App extends Component {
   render() {

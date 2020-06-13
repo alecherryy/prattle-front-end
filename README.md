@@ -16,3 +16,8 @@ npm install --save node-sass
 ```
 
 fixed the issue.
+
+To start the app, run
+```
+npm start
+```
