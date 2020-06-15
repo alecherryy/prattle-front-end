@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Clip 114</title>
+    <defs>
+        <filter x="-20.7%" y="-20.7%" width="141.4%" height="141.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M53.8631325,0.374379133 L17.5661659,0 C15.2572677,-0.023743406 13.3666236,1.81558948 13.3424805,4.10808644 L13.2309461,14.7763522 C13.222105,15.6262881 12.2165951,16.0895826 11.5674513,15.5357904 C10.3806981,14.5244443 8.90830796,13.9179744 7.30636111,13.9014282 C3.31866622,13.8602314 0.0477838892,17.4838556 0,21.9945604 C-0.0467483168,26.5056028 3.14796418,30.1954119 7.13565907,30.2366087 C8.73760592,30.2531549 10.2225777,29.6774137 11.4293935,28.6907181 C12.0907789,28.1504331 13.0864274,28.6343258 13.0772462,29.4845994 L12.9657118,40.1525275 C12.9419088,42.4450245 14.7937879,44.3228527 17.102686,44.3464902 L28.2064797,44.4609631 C29.0956945,44.4704181 29.5445525,45.5317405 28.9246525,46.163874 C27.7154563,47.3967369 26.9785812,48.9932792 26.9602188,50.7441404 C26.9187335,54.7040921 30.5677446,57.9522182 35.1100511,58 C39.6530377,58.0460927 43.3686975,54.8736065 43.4098428,50.9136548 C43.4285452,49.1627936 42.7253344,47.5513935 41.5419816,46.2942177 C40.9353433,45.6492525 41.4066441,44.597385 42.2951789,44.6061647 L53.3993126,44.7206376 C55.7078707,44.7446127 57.5991949,42.9052798 57.622998,40.6127829 L58,4.56834176 C58.0239098,2.2758448 56.1716906,0.398016604 53.8631325,0.374379133" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sign-In" transform="translate(-107.000000, -48.000000)">
+            <g id="Logo" filter="url(#filter-1)" transform="translate(111.000000, 50.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Clip-114" fill="#84A3FD" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

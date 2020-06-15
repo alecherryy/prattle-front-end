@@ -1,0 +1,16 @@
+// @file
+// Page wrapper
+
+.split-layout {
+  align-items: center;
+  display: flex;
+  height: 100%;
+
+  > * {
+    flex-basis: 65%;
+
+    &:last-child {
+      flex-basis: 35%;
+    }
+  }
+}
