@@ -1,0 +1,24 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Logo
+
+.logo {
+  background-image: url('../../images/icon-puzzle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 88px 88px;
+  height: rem(88px);
+  left: 2rem;
+  position: absolute;
+  text-align: center;
+  top: rem(-32px);
+  width: rem(88px);
+
+  img {
+    max-width: 70%;
+    right: .5rem;
+    position: absolute;
+    top: .5rem;
+  }
+}

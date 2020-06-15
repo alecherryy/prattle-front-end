@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Form
+
+.form {
+
+  ::placeholder {
+    color: $purple-light-1;
+    font-size: $font-size-sm;
+    font-weight: 700;
+  }
+}

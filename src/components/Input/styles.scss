@@ -1,0 +1,34 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Form input
+
+.input {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px $purple-light-2;
+  box-shadow: none;
+  color: $purple-light;
+  font-size: $font-size-sm;
+  font-family: $base-font-family;
+  font-weight: 700;
+  margin: 0 0 2.5rem;
+  padding: 0 0 .5rem;
+  width: 100%;
+
+  &:focus {
+    border-color: $purple-light;
+    outline: none;
+  }
+
+  &.input--submit {
+    background-image: linear-gradient(to right, $purple-light, $purple-light-3);
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    padding: 1rem 0;
+    transition: all 0.4s ease-in-out;
+  }
+}
