@@ -9,7 +9,7 @@ const Content = ({title, children}) => {
 
   return (
     <div className="content">
-      {getTitle(title)};
+      {getTitle(title)}
       {children}
     </div>
   );
