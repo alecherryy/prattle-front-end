@@ -1,5 +1,5 @@
 # Prattle Messaging App
-### __Team members__: [@acfpho](https://github.ccs.neu.edu/acfpho), [@svasisht54](https://github.ccs.neu.edu/svasisht54), [@madgiamit](https://github.ccs.neu.edu/madgiamit) and [@apizzoccheri](https://github.ccs.neu.edu/apizzoccheri)
+### __Team members__: [@acfpho](https://github.ccs.neu.edu/acfpho), [@svasisht54](https://github.ccs.neu.edu/svasisht54), [@amadgi](https://github.com/amadgi) and [@alecherryy](https://github.com/alecherryy)
 This repository contains the front end work for the Prattle Messaging App. To get started on the project, clone this repo and run:
 ```
 npm install
