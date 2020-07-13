@@ -1,0 +1,76 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Teaser user
+
+.teaser {
+  @include button-clear;
+  
+  background-color: $white;
+  border-bottom: solid 1px $gray-3;
+  display: block;
+  color: $gray-2;
+  cursor: pointer;
+  font-size: $font-size-xs;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  transition-duration: 0.2s;
+  width: 100%;
+
+
+  &:nth-of-type(5n+1) {
+    .teaser__name {
+      &::before {
+        background-color: $purple-light-3;
+      }
+    }
+  }
+
+  &:nth-of-type(5n+2) {
+    .teaser__name {
+      &::before {
+        background-color: $pink-light;
+      }
+    }
+  }
+  
+  &:nth-of-type(5n+3) {
+    .teaser__name {
+      &::before {
+        background-color: $pink;
+      }
+    }
+  }
+  
+  &:nth-of-type(5n+4) {
+    .teaser__name {
+      &::before {
+        background-color: $orange;
+      }
+    }
+  }
+
+  &[data-active='true'] {
+    background-color: $gray-4;
+  }
+}
+
+.teaser__name {
+  font-size: $base-font-size;
+  font-weight: 900;
+  margin: 0 0 0.25rem;
+  position: relative;
+
+  &::before {
+    background-color: $purple-light;
+    border-radius: 100%;
+    content: '';
+    display: inline-block;
+    height: 7px;
+    left: -1rem;
+    margin-right: 0.5rem;
+    position: absolute;
+    top: calc((100% - 7px)/2);
+    width: 7px;
+  }
+}

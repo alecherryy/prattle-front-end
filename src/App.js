@@ -1,11 +1,53 @@
 import './App.scss';
 import React, { Component } from 'react';
-import SignIn from './components/SignIn';
+import Teaser from './components/Teaser/Teaser';
 
 class App extends Component {
   render() {
     return (
-      <SignIn />
+      <div>
+
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+        <Teaser 
+          name="Alessia Pizzoccheri"
+          username="alecherryy"
+        />
+      </div>
     );
   }
 }
