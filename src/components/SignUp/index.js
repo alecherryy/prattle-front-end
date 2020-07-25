@@ -3,7 +3,7 @@ import PageWrapper from '../PageWrapper';
 import Logo from '../Logo';
 import SplitLayout from '../SplitLayout';
 import HeroImage from '../HeroImage';
-import Login from '../Form/Login';
+import Register from '../Form/Register';
 import Content from '../Content';
 
 const SignIn = () => {
@@ -14,10 +14,10 @@ const SignIn = () => {
         <HeroImage />
         <Content
           title="Hello,
-          welcome back."
+          welcome to prattle."
         >
 
-          <Login />
+          <Register />
         </Content>
       </SplitLayout>
     </PageWrapper>
