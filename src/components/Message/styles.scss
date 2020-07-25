@@ -1,0 +1,42 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Teaser user
+
+.message {  
+  clear: both;
+  float: left;
+  line-height: 1.45;
+  margin: 0 0 1rem;
+  max-width: rem(284px);
+
+  h5 {
+    font-size: rem($font-size-sm);
+    font-weight: 900;
+    margin: 0 0 0.25rem;
+  }
+  
+  &.by-user {
+    float: right;
+
+    h5 {
+      display: none;
+    }
+  }
+}
+
+.message__content {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 1rem;
+
+  .by-user & {
+    background-color: $purple-light-4;
+  }
+}
+
+.message__date {
+  display: block;
+  font-size: rem($font-size-xs);
+  margin: 0.25rem 0 0;
+}

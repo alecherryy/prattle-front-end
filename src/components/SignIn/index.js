@@ -13,8 +13,7 @@ const SignIn = () => {
       <SplitLayout>
         <HeroImage />
         <Content
-          title="Hello,
-          welcome back."
+          title="Welcome to prattle."
         >
 
           <Login />
