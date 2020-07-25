@@ -12,7 +12,7 @@ html {
 body {
   align-items: center;
   background-color: $blue;
-  color: $blue-dark;
+  color: $gray-2;
   font-family: $base-font-family;
   display: flex;
   margin: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  background-color: $white;
+  background-color: $gray-4;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
   height: calc(100vh - 20vh);
@@ -56,69 +56,69 @@ main {
 h1,
 %h1 {
   @extend %hN;
-  font-size: $font-size-h2;
+  font-size: rem($font-size-h2);
   margin-bottom: 0.5em;
 
   @include bp-medium {
-    font-size: $font-size-h1;
+    font-size: rem($font-size-h1);
   }
 }
 
 h2,
 %h2 {
   @extend %hN;
-  font-size: $font-size-h3;
+  font-size: rem($font-size-h3);
 
   @include bp-medium {
-    font-size: $font-size-h2;
+    font-size: rem($font-size-h2);
   }
 }
 
 h3,
 %h3 {
   @extend %hN;
-  font-size: $font-size-lg;
+  font-size: rem($font-size-lg);
 
   @include bp-medium {
-    font-size: $font-size-h3;
+    font-size: rem($font-size-h3);
   }
 }
 
 h4,
 %h4 {
   @extend %hN;
-  font-size: $font-size-h5;
+  font-size: rem($font-size-h5);
 
   @include bp-medium {
-    font-size: $font-size-h4;
+    font-size: rem($font-size-h4);
   }
 }
 
 h5,
 %h5 {
   @extend %hN;
-  font-size: $font-size-h6;
+  font-size: rem($font-size-h6);
 
   @include bp-medium {
-    font-size: $font-size-h5;
+    font-size: rem($font-size-h5);
   }
 }
 
 h6,
 %h6 {
   @extend %hN;
-  font-size: $font-size-h6;
+  font-size: rem($font-size-h6);
 }
 
 h1, h2, h3, h4, h5, h6 {
   // Remove top margin for adjacent subheadings.
-  font-family: $base-font-family;
+  font-family: rem($base-font-family);
 }
 
 p {
   font: {
-    family: $base-font-family;
-    size: $base-font-size;
+    family: rem($base-font-family);
+    size: rem($base-font-size);
   }
   margin: 0 0 1rem;
 

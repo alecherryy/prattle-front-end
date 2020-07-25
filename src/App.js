@@ -1,51 +1,20 @@
 import './App.scss';
 import React, { Component } from 'react';
-import Teaser from './components/Teaser/Teaser';
+import Message from './components/Message/Message';
 
 class App extends Component {
   render() {
     return (
       <div>
 
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
+        <Message 
+          from="alecherryy"
+          content="Cum appetere eloquentiam comprehensam ne, luptatum pertinax reprehendunt qui ea."
+          date="February 14, 2020"
         />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
-        />
-        <Teaser 
-          name="Alessia Pizzoccheri"
-          username="alecherryy"
+        <Message 
+          content="Cum appetere eloquentiam comprehensam ne, luptatum pertinax reprehendunt qui ea."
+          date="February 14, 2020"
         />
       </div>
     );
