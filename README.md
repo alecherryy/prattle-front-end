@@ -1,5 +1,5 @@
 # Prattle Messaging App
-### __Team members__: [@acfpho](https://github.ccs.neu.edu/acfpho), [@svasisht54](https://github.ccs.neu.edu/svasisht54), [@amadgi](https://github.com/amadgi) and [@alecherryy](https://github.com/alecherryy)
+### __Authors__: [@amadgi](https://github.com/amadgi) and [@alecherryy](https://github.com/alecherryy)
 This repository contains the front end work for the Prattle Messaging App. To get started on the project, clone this repo and run:
 ```
 npm install
@@ -67,14 +67,3 @@ Code review is a crucial part of good development, as both the reviewer and revi
 1. **Everyone's style is different** - when reviewing someone's code, ask yourself whether something is just a stylistic choice or an actual error.
 2. **Don't be defensive** - code reviews make us better, if and when one your teammates points something out, don't take it as a personal assault on your skills.
 3. **Not all feedback needs to be addressed** - Some comments may just be suggestions rather than actual requests, if you are confident in your choices, feel free to ignore it and move on.
-
-## Commenting
-When working with multiple developers, commeting helps others understand not only what you did, but *why* you did it. Every class, interface and method should have JavaDoc style comments to explain what the code is doing. Comment example:
-```
-/**
-* Descriptive text of what the code does.
-* @param example of a class or method parameter
-* @return somethinf
-* @throws SampleException, in case _something_ fails
-*/
-```
