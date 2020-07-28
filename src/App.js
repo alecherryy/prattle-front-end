@@ -1,22 +1,26 @@
 import './App.scss';
 import React, { Component } from 'react';
-import Message from './components/Message/Message';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
 
 class App extends Component {
   render() {
     return (
-      <div>
-
-        <Message 
-          from="alecherryy"
-          content="Cum appetere eloquentiam comprehensam ne, luptatum pertinax reprehendunt qui ea."
-          date="February 14, 2020"
-        />
-        <Message 
-          content="Cum appetere eloquentiam comprehensam ne, luptatum pertinax reprehendunt qui ea."
-          date="February 14, 2020"
-        />
-      </div>
+      <Router>
+          <Switch>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+          </Switch>
+      </Router>
     );
   }
 }
