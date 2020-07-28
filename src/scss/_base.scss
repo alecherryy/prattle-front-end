@@ -34,7 +34,7 @@ main {
 %hN {
   @extend %base-font-family !optional;
   color: $blue-dark;
-  font-weight: 700;
+  font-weight: 900;
   hyphens: none;
   line-height: 1.1;
   margin: 0 0 rem($vertical-spacing);
@@ -108,11 +108,6 @@ h6,
 %h6 {
   @extend %hN;
   font-size: rem($font-size-h6);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  // Remove top margin for adjacent subheadings.
-  font-family: rem($base-font-family);
 }
 
 p {

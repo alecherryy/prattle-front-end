@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageWrapper from '../PageWrapper';
 import Logo from '../Logo';
 import SplitLayout from '../SplitLayout';
 import HeroImage from '../HeroImage';
-import Login from '../Form/Login';
+import RegisterForm from '../Form/RegisterForm';
 import Content from '../Content';
 
-const SignIn = () => {
+const Register = () => {
   return (
     <PageWrapper>
       <Logo />
@@ -16,11 +17,12 @@ const SignIn = () => {
           title="Welcome to prattle."
         >
 
-          <Login />
+          <RegisterForm />
+          <p className="form__text">Already have an account? <Link to="/login">Login.</Link></p>
         </Content>
       </SplitLayout>
     </PageWrapper>
   );
 }
 
-export default SignIn;
+export default Register;
