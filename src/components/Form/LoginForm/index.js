@@ -12,13 +12,14 @@ export default class LoginForm extends React.Component {
   login = (e) => {
     e.preventDefault();
     // const location = document.location.host;
-    const path = `https://localhost:8080/prattle/rest/user/signin`;
+    const path = `http://localhost:8080/prattle/rest/user/signin`;
     fetch(path, {
       method: 'POST',
       body: JSON.stringify(this.state.user),
       headers: {
-        'Accept': 'application/json',
-        'content-type': 'application/json'
+        'accept': 'application/json',
+        'content-type': 'application/json',
+        'mode':'no-cors'
       }
     }).then(res => {
       if (!res.ok) {

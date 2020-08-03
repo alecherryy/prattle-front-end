@@ -1,0 +1,46 @@
+@import '../../scss/variables.scss';
+
+// @file
+// Alert
+
+.alert {
+  animation: 4s ease-in-out 0s 1 forwards slide-in;
+  background-color: $purple-light-3;
+  border-radius: 25px;
+  color: $blue-dark;
+  opacity: 0;
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  position: fixed;
+  right: 10vh;
+  top: 2vh;
+  transform: translateX(50%);
+
+  &::after {
+    background-color: $pink;
+    border-radius: 100%;
+    content: '';
+    display: inline-block;
+    height: 9px;
+    margin-left: 0.5rem;
+    width: 9px;
+  }
+
+  @include bp-xxlarge {
+    right: calc((100vw - #{$screen-xl-min}) / 2);
+  }
+}
+
+@keyframes slide-in {
+  25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}

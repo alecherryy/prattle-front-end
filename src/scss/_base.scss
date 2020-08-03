@@ -27,8 +27,13 @@ main {
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
   height: calc(100vh - 20vh);
   margin: 10vh auto 0;
-  max-width: rem(1280px);
   width: calc(100vw - 20vw);
+  position: relative;
+
+  @include bp-xxlarge {
+    max-width: $screen-xl-min;
+    width: 100%;
+  }
 }
 
 %hN {
