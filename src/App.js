@@ -12,14 +12,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-          <Switch>
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            <Route exact path="/register">
-              <Register />
-            </Route>
-          </Switch>
+        <Switch>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+        </Switch>
       </Router>
     );
   }

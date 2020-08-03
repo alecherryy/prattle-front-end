@@ -14,7 +14,7 @@ const Login = () => {
       <SplitLayout>
         <HeroImage />
           <Content
-            title="Welcome back."
+            title="Hello, welcome back."
           >
           <LoginForm />
           <p className="form__text">Don't have an account? <Link to="/register">Register.</Link></p>
