@@ -1,7 +1,16 @@
+@import '../../scss/variables.scss';
+
 // @file
 // Page wrapper
 
 .page-wrapper {
+  animation: 1s ease-in 0s 1 forwards fadein;
   height: 100%;
+  opacity: 0;
   position: relative;
+}
+
+.page-wrapper--small {
+  margin: auto;
+  max-width: rem(450px);
 }

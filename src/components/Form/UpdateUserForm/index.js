@@ -2,7 +2,7 @@ import '../styles.scss';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default class RegisterForm extends React.Component {
+export default class UpdateUserForm extends React.Component {
   state = {
     user: {
       username: '',
@@ -12,11 +12,31 @@ export default class RegisterForm extends React.Component {
     }
   };
 
-  register = (e) => {
-    e.preventDefault();
+  user = () => {
 
     const path = `http://localhost:8080/user/register`;
+
+    fetch(path, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'content-type': 'application/json'
+      }
+    }).then(res => {
+      if (!res.ok) {
+        console.log(res);
+        alert('Registration failed');
+      } else {
+        alert('Your account was successfully created!');
+      }
+    })
+  }
+  
+  update = (e) => {
+    e.preventDefault();
+    const path = `http://localhost:8080/user/register`;
     const history = useHistory();
+
     fetch(path, {
       method: 'POST',
       body: JSON.stringify(this.state.user),
@@ -28,21 +48,41 @@ export default class RegisterForm extends React.Component {
       if (!res.ok) {
         alert('Registration failed');
       } else {
-        console.log(res);
         alert('Your account was successfully created!');
-        // if successful, redirect to login page
-        history.push('/login');
+        history.push('/chat'); // or res.json()
       }
     })
   }
 
+  delete = () => {
+    // const path = `http://${document.location.host}/prattle/rest/user/delete/${username}`;
+    const path = '';
+    const history = useHistory();
+
+    // posting the user to db
+    fetch(path, {
+      method: 'DELETE',
+      body: JSON.stringify('alecherryy'),
+    })
+    .then(res => res.text())
+    .then(res => {
+      // redirect user to register page
+      history.push('/login'); // or res.json()
+    })
+  };
+
+  componentDidMount() {
+    this.user();
+  }
+
   render() {
     return (
-      <form className="form" action="post" autocomplete="off">
-        <input id="username"
+      <form className="form" action="post" autoComplete="off">
+        <input 
+          disabled
+          id="username"
           datatype="username"
           type="text"
-          placeholder="Username*"
           value={this.state.user.username}
           onChange={(e) => this.setState({
             user: {
@@ -51,11 +91,12 @@ export default class RegisterForm extends React.Component {
             }
           })}
         />
-        <input id="password"
+        <input 
+          id="password"
           datatype="password"
           type="password"
-          placeholder="Password*"
           value={this.state.user.password}
+          required
           onChange={(e) => this.setState({
             user: {
               ...this.state.user,
@@ -66,32 +107,33 @@ export default class RegisterForm extends React.Component {
         <input id="first"
           datatype="first_name"
           type="text"
-          placeholder="First Name*"
+          required
           value={this.state.user.firstName}
           onChange={(e) => this.setState({
             user: {
               ...this.state.user,
               firstName: e.target.value
             }
-          })}
-          required/>
+          })}/>
         <input id="last"
           datatype="last_name"
           type="text"
           placeholder="Last Name*"
           value={this.state.user.lastName}
+          required
           onChange={(e) => this.setState({
             user: {
               ...this.state.user,
               lastName: e.target.value
             }
-          })}
-          required/>
+          })}/>
         <input type="submit"
-          className="button button--register"
-          value="Create an account"
+          className="button button--update"
+          value="Update account"
+          required
           onClick={this.register}
         />
+        <button className="form__link" onClick={this.delete}>Delete account</button>
       </form>
     )
   }

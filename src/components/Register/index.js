@@ -16,7 +16,6 @@ const Register = () => {
         <Content
           title="Welcome to prattle."
         >
-
           <RegisterForm />
           <p className="form__text">Already have an account? <Link to="/login">Login.</Link></p>
         </Content>

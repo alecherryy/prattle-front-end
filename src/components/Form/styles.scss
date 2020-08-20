@@ -46,6 +46,13 @@
       background-image: linear-gradient(to right, $purple-light, $purple-light-3);
       background-image: linear-gradient(to right, $pink, $pink-light 90%);
     }
+    
+    &.button--update {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 1rem 2rem;
+      width: auto;
+    }
   }
 }
 
@@ -54,5 +61,40 @@
 
   a {
     font-weight: 900;
+  }
+}
+
+.form__link {
+  @include button-clear();
+
+  color: $blue-dark;
+  font-weight: 900;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.update {
+  h2 {
+    position: relative;
+    padding: 5rem 0 0;
+    z-index: 2;
+
+    &::before {
+      background-image: url('../../images/icon-update-puzzle.svg');
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+      display: block;
+      height: rem(154px);
+      left: rem(-97px);
+      position: absolute;
+      top: 0;
+      width: rem(151px);
+      z-index: -1;
+    }
   }
 }

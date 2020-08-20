@@ -1,9 +1,9 @@
 import './styles.scss';
 import React from 'react';
 
-const PageWrapper = ({children}) => {
+const PageWrapper = ({modifierCLasses, children}) => {
   return (
-    <div className="page-wrapper">
+    <div className={`page-wrapper ${modifierCLasses ? modifierCLasses : ''}`}>
       {children}
     </div>
   );
