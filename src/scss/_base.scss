@@ -14,6 +14,7 @@ body {
   background-color: $blue;
   color: $gray-2;
   font-family: $base-font-family;
+  font-size: rem($base-font-size);
   display: flex;
   margin: 0;
   overflow-x: hidden;
@@ -138,8 +139,14 @@ hr {
 
 a {
   color: $blue-dark;
-  font-family: $base-font-family;
   text-decoration: none;
+
+  &.cancel {
+    font-weight: 900;
+    position: absolute;
+    text-transform: uppercase;
+    right: -80%;
+  }
 }
 
 img {

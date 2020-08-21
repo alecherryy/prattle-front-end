@@ -6,8 +6,7 @@
     "aos": "^2.3.4",
     "gulp": "^4.0.2",
     "node-sass": "^4.14.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "2.0.5"
   },
@@ -28,6 +27,7 @@
   ],
   "devDependencies": {
     "modularscale-sass": "^3.0.8",
+    "react-dom": "^16.8.0",
     "sass-loader": "^7.1.0",
     "url-loader": "^4.1.0"
   }
