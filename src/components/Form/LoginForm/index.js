@@ -11,8 +11,7 @@ export default class LoginForm extends React.Component {
 
   login = (e) => {
     e.preventDefault();
-    // const location = document.location.host;
-    const path = `http://localhost:8080/prattle/rest/user/signin`;
+    const path = `http://${document.location.host}/prattle/rest/user/signin`;
     fetch(path, {
       method: 'POST',
       body: JSON.stringify(this.state.user),

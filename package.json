@@ -27,7 +27,9 @@
   ],
   "devDependencies": {
     "modularscale-sass": "^3.0.8",
+    "prop-types": "^15.7.2",
     "react-dom": "^16.8.0",
+    "react-websocket": "^2.1.0",
     "sass-loader": "^7.1.0",
     "url-loader": "^4.1.0"
   }

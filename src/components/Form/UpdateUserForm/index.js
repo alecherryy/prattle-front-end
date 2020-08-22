@@ -13,8 +13,7 @@ export default class UpdateUserForm extends React.Component {
   };
 
   user = () => {
-
-    const path = `http://localhost:8080/user/register`;
+    const path = `http://${document.location.host}/prattle/rest/user/update/${username}`;
 
     fetch(path, {
       method: 'GET',
@@ -34,7 +33,7 @@ export default class UpdateUserForm extends React.Component {
   
   update = (e) => {
     e.preventDefault();
-    const path = `http://localhost:8080/user/register`;
+    const path = `http://${document.location.host}/user/register`;
     const history = useHistory();
 
     fetch(path, {
@@ -55,8 +54,7 @@ export default class UpdateUserForm extends React.Component {
   }
 
   delete = () => {
-    // const path = `http://${document.location.host}/prattle/rest/user/delete/${username}`;
-    const path = '';
+    const path = `http://${document.location.host}/prattle/rest/user/delete/${username}`;
     const history = useHistory();
 
     // posting the user to db
