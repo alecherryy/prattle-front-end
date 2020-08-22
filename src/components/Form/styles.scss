@@ -9,7 +9,7 @@
   ::placeholder {
     color: $purple-light-1;
     font-size: $font-size-sm;
-    font-weight: 900;
+    font-weight: 700;
   }
 
   input {
@@ -21,7 +21,7 @@
     color: $purple-light;
     font-size: $font-size-sm;
     font-family: $base-font-family;
-    font-weight: 900;
+    font-weight: 700;
     margin: 0 0 2.5rem;
     padding: 0 0 .5rem;
     width: 100%;
@@ -60,7 +60,7 @@
   color: $blue;
 
   a {
-    font-weight: 900;
+    font-weight: 700;
   }
 }
 
@@ -68,7 +68,7 @@
   @include button-clear();
 
   color: $blue-dark;
-  font-weight: 900;
+  font-weight: 700;
 
   &:hover,
   &:focus {

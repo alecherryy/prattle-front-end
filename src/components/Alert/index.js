@@ -9,6 +9,12 @@ export default class Content extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState(state => ({
+      isOnline: this.props.userIsOnline
+    }));
+  }
+
   render() {
     return (
       <span className="alert">

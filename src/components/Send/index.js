@@ -14,22 +14,16 @@ export default class Send extends React.Component {
     }
   };
 
-  send = (e) => {
-    e.preventDefault();
-
-    this.props.onSubmitMessage(this.state.message);
-    this.setState({ message: {
-        content: ''
-      } 
-    })
-  }
-
   render() {
     return (
       <form 
         className="chat-input" 
         action="." 
-        onSubmit={this.send}>
+        onSubmit={e => {
+          e.preventDefault()
+          this.props.onSendMessage(this.state.message)
+          this.setState({ message: '' })
+        }}>
         <label class="chat-input__toggle">
           Set message to private
           <input type="checkbox" id="Private" data-private="false" />
