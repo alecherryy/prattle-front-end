@@ -15,7 +15,7 @@ export default class RegisterForm extends React.Component {
   register = (e) => {
     e.preventDefault();
 
-    const path = `http://localhost:8080/user/register`;
+    const path = `http://${document.location.host}/user/register`;
     const history = useHistory();
     fetch(path, {
       method: 'POST',
