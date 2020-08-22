@@ -1,12 +1,18 @@
 import './styles.scss';
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Content extends React.Component {
+class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isOnline: true
     };
+  }
+
+  componentDidMount() {
+    this.setState(state => ({
+      isOnline: this.props.userIsOnline
+    }));
   }
 
   render() {
@@ -17,3 +23,5 @@ export default class Content extends React.Component {
     );
   }
 }
+
+export default Content;

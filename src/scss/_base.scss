@@ -40,7 +40,7 @@ main {
 %hN {
   @extend %base-font-family !optional;
   color: $blue-dark;
-  font-weight: 900;
+  font-weight: 700;
   hyphens: none;
   line-height: 1.1;
   margin: 0 0 rem($vertical-spacing);
@@ -142,7 +142,7 @@ a {
   text-decoration: none;
 
   &.cancel {
-    font-weight: 900;
+    font-weight: 700;
     position: absolute;
     text-transform: uppercase;
     right: -80%;
