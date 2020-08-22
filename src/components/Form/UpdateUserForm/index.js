@@ -2,7 +2,7 @@ import '../styles.scss';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default class UpdateUserForm extends React.Component {
+class UpdateUserForm extends Component {
   state = {
     user: {
       username: '',
@@ -136,3 +136,5 @@ export default class UpdateUserForm extends React.Component {
     )
   }
 }
+
+export default UpdateUserForm;

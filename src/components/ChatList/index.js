@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Teaser from '../Teaser';
 
-export default class ChatList extends React.Component {
+class ChatList extends Component {
   state = {
     chats: []
   };
@@ -34,3 +34,4 @@ export default class ChatList extends React.Component {
     );
   }
 }
+export default ChatList;

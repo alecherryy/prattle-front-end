@@ -1,17 +1,23 @@
 import './styles.scss';
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
-export default class Send extends React.Component {
+class Send extends Component {
   static propTypes = {
-    onSubmitMessage: PropTypes.func.isRequired,
+    onSendMessage: PropTypes.func.isRequired,
   }
 
   state = {
-    message: {
-      from: '',
-      content: '',
-    }
+    object: {
+      message: {
+        type: '',
+        from: '',
+        to: '',
+        content: '',
+        status: false
+      }
+    },
+    isDisabled: true
   };
 
   render() {
@@ -21,23 +27,53 @@ export default class Send extends React.Component {
         action="." 
         onSubmit={e => {
           e.preventDefault()
-          this.props.onSendMessage(this.state.message)
-          this.setState({ message: '' })
+          this.props.onSendMessage(this.state.object)
+          this.setState({ 
+            object: {
+              message: {
+                ...this.state.message,
+                type: '',
+                from: '',
+                to: '',
+                content: '',
+                status: false
+              }
+            }
+          })
         }}>
-        <label class="chat-input__toggle">
+        <label className="chat-input__toggle">
           Set message to private
-          <input type="checkbox" id="Private" data-private="false" />
-          <span class="chat-input__indicator"></span>
+          <input 
+            type="checkbox" 
+            id="Private" 
+            data-private="false"
+            checked={this.state.object.message.status}
+            onChange={() => this.setState({
+              object: {
+                message: {
+                  ...this.state.object.message,
+                  status: !this.state.object.message.status
+                }
+              }
+            })}
+          />
+          <span className="chat-input__indicator"></span>
         </label>
-        <input id="MessageContent"
+        <input 
+          id="MessageContent"
           datatype="content"
           type="text"
           placeholder="Type a message..."
+          autoComplete="off"
+          value={this.state.object.message.content}
           onChange={(e) => this.setState({
-            user: {
-              ...this.state.message,
-              content: e.target.value
-            }
+            object: {
+              message: {
+                ...this.state.object.message,
+                content: e.target.value
+              }
+            },
+            isDisabled: false
           })}
         />
         <input 
@@ -46,11 +82,15 @@ export default class Send extends React.Component {
           className="button button--file"
           placeholder="Upload a file"
         />
-        <input type="submit"
+        <input 
+          type="submit"
           className="button button--send"
           value="Send message"
+          disabled={this.state.isDisabled}
         />
       </form>
     )
   }
 }
+
+export default Send;

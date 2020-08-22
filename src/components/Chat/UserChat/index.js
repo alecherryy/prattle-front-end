@@ -21,7 +21,6 @@ class Chat extends Component {
       // on connecting, do nothing but log it to the console
       this.setState({
         startSession: true,
-        messages: []
       })
     }
 
@@ -44,11 +43,11 @@ class Chat extends Component {
     this.setState(state => ({ messages: [message, ...state.messages] }))
   }
 
-  sendMessage = messageString => {
+  sendMessage = messageObject => {
     // on submitting the ChatInput form, send the message, add it to the list and reset the input
-    const message = { from: this.state.from, message: messageString }
-    this.ws.send(JSON.stringify(message));
-    this.addMessage(message);
+    console.log(JSON.stringify(messageObject));
+    // this.ws.send(JSON.stringify(message));
+    this.addMessage(messageObject);
   }
 
   render() {
@@ -65,6 +64,7 @@ class Chat extends Component {
           <ChatList />
           <ChatList />
           <ChatWindow
+            ws={this.ws}
             messages={messagesSent}
             onSendMessage={messageContent => this.sendMessage(messageContent)}
           />

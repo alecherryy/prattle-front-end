@@ -17,7 +17,7 @@ class ChatWindow extends Component {
   render() {
     return (
       <div className="chat-window">
-        <div class="chat-window__messages">
+        <div className="chat-window__messages">
           {this.state.messages.map((message, i) => 
             <Message
               key={i}

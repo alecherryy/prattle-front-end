@@ -1,8 +1,8 @@
 import '../styles.scss';
-import React from 'react';
+import React, { Component } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default class RegisterForm extends React.Component {
+class RegisterForm extends Component {
   state = {
     user: {
       username: '',
@@ -96,3 +96,5 @@ export default class RegisterForm extends React.Component {
     )
   }
 }
+
+export default RegisterForm;

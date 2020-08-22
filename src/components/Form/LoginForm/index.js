@@ -1,7 +1,7 @@
 import '../styles.scss';
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class LoginForm extends React.Component {
+class LoginForm extends Component {
   state = {
     user: {
       username: '',
@@ -33,8 +33,14 @@ export default class LoginForm extends React.Component {
 
   render() {
     return (
-    <form className="form" action="post" autocomplete="off">
-      <input id="username"
+    <form className="form" action="post"
+        onSubmit={e => {
+        this.login(e);
+      }}
+    >
+      <input 
+        autocomplete="off"
+        id="username"
         datatype="username"
         type="text"
         placeholder="Username"
@@ -46,7 +52,9 @@ export default class LoginForm extends React.Component {
           }
         })}
       />
-      <input id="password"
+      <input 
+        autocomplete="off"
+        id="password"
         datatype="password"
         type="password"
         placeholder="Password"
@@ -58,13 +66,15 @@ export default class LoginForm extends React.Component {
           }
         })}
       />
-      <input type="submit"
+      <input 
+        type="submit"
         className="button button--signup"
         value="Login"
         id="signup"
-        onClick={this.login}
       />
     </form>
     )
   }
 }
+
+export default LoginForm;

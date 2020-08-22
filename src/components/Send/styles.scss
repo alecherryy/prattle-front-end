@@ -40,8 +40,14 @@
     text-shadow: none;
     padding: 0;
     position: absolute;
+    transition-duration: 0.2s;
     right: 0;
     width: 46px;
+
+    &:disabled {
+      cursor: auto;
+      opacity: 0.5;
+    }
 
     &.button--file {
       background-color: $purple-light-3;
